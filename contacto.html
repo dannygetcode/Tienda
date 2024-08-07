@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='estilo.css'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Registro</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>Registro</header>
+        <form action="#">
+            <div class="form first">
+                <span class="title">Detalles Personales</span>
+                <div class="fields">
+
+                    <div class="input-field">
+                        <label>Nombre Completo</label>
+                        <input type="text" placeholder="Ingresa tu nombre" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Cedula o Nit</label>
+                        <input type="text" placeholder="Documento de Identidad" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Email</label>
+                        <input type="text" placeholder="Ingresa tu Email" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Numero de Telefono</label>
+                        <input type="tel" placeholder="Numero de Telefono" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Departamento</label>
+                        <input type="text" placeholder="Departamento" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Ciudad</label>
+                        <input type="search" placeholder="Ciudad" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Codigo Postal</label>
+                        <input type="search" placeholder="Codigo Postal" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Direccion de Envio</label>
+                        <input type="text" placeholder="Direccion de Envio" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Especificaciones</label>
+                        <input type="text" placeholder="Apartamento, Oficina, Local, etc (Opcional)" required>
+                    </div>
+                </div>
+
+                <button type="button" onclick="enviar()" class="nextBtn">
+                    <span class="btnText">Enviar</span>
+                    <i class="uil uil-navigator"></i>
+                </button>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        function enviar() {
+            Swal.fire({
+                title: "Ok!",
+                text: "Registro enviado correctamente!",
+                icon: "success"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    const campos = document.querySelectorAll(".input-field input");
+                    campos.forEach(campo => campo.value = "");
+                }
+            });
+        }
+    </script>
+
+
+
+    <script src="sweetAlert.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

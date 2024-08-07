@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online - Lanas de Sali</title>
+    <link rel="shortcut icon" href="/otras_imagenes/sombra.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="script" href="script.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo"><img src="imagenes estandar/logo.png" alt="logo" width="140" height="auto"></a>
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="/imagenes estandar/menu.png" class="menu-icono" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a onclick="inicio()" href="#">Inicio</a></li>
+                    <li><a onclick="oops()" href="#">Productos</a></li>
+                    <li><a href="contacto.html">Registro</a></li>
+                </ul>
+            </nav>
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img src="imagenes estandar/car.svg" id="img-carrito" alt="carrito">
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen </th>
+                                        <th>Nombre </th>
+                                        <th>Precio </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <a onclick="vaciarCarritoBoton()" href="#" id="vaciar-carrito" class="btn-2">Vaciar
+                                Carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="header-content container">
+            <div class="header-img">
+                <img src="imagenes prendas de lana/IMG_6307.jpg" alt="" width="540" height="720"
+                    style="border-radius: 30px;">
+            </div>
+            <div class="header-txt">
+                <h1>Ofertas Especiales</h1>
+                <p>Estrena las mejores prendas</p>
+                <a onclick="oops()" href="#" class="btn-1">informacion</a>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="ofert container">
+        <div class="ofert-1">
+            <div class="ofert-img">
+                <img src="imagenes prendas de lana/IMG_6462.jpg" alt="" width="auto" height="auto">
+            </div>
+            <div class="ofert-txt">
+                <h3>Guantes de Lana Rojos</h3>
+                <a onclick="imageDos()" href="#" class="btn-2">informacion</a>
+            </div>
+        </div>
+
+        <div class="ofert-1">
+            <div class="ofert-img">
+                <img src="imagenes prendas de lana/IMG_6458.jpg" alt="" width="auto" height="auto">
+            </div>
+            <div class="ofert-txt">
+                <h3>Guantes de Lana Anaranjado</h3>
+                <a onclick="imageUno()" href="#" class="btn-2">informacion</a>
+            </div>
+        </div>
+
+        <div class="ofert-1">
+            <div class="ofert-img">
+                <img src="imagenes prendas de lana/IMG_6454.jpg" alt="" width="auto" height="auto">
+            </div>
+            <div class="ofert-txt">
+                <h3>Guantes de Lana Blancos</h3>
+                <a onclick="imageTres()" href="#" class="btn-2">informacion</a>
+            </div>
+        </div>
+
+    </section>
+
+    <main class="products container" id="lista-1">
+
+        <h2>Preview Productos</h2>
+        <div class="product-content">
+
+            <div class="product">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="imagenes prendas de lana/IMG_6191.jpg" class="c-block w-90" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagenes prendas de lana/IMG_6184.jpg" class="c-block w-90" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagenes prendas de lana/IMG_6177.jpg" class="c-block w-90" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    <div class="product-txt">
+                        <h3>Guantes de Lana Rosa</h3>
+                        <p>Calidad Premium</p>
+                        <p class="precio">$25.900</p>
+                        <a onclick="agregarAlCarrito()" href="#" class="agregar-carrito btn-2" data-id="1">Agregar al
+                            Carrito</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="imagenes prendas de lana/IMG_6278.jpg" class="c-block w-90" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagenes prendas de lana/IMG_6281.jpg" class="c-block w-90" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagenes prendas de lana/IMG_6285.jpg" class="c-block w-90" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    <div class="product-txt">
+                        <h3>Conjunto de Lana Rojo</h3>
+                        <p>(Guantes, Gorro, Cuello), Calidad Premium</p>
+                        <p class="precio">$75.900</p>
+                        <a onclick="agregarAlCarrito()" href="#" class="agregar-carrito btn-2" data-id="1">Agregar al
+                            Carrito</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="imagenes prendas de lana/IMG_6292.jpg" class="c-block w-90" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagenes prendas de lana/IMG_6298.jpg" class="c-block w-90" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagenes prendas de lana/IMG_6307.jpg" class="c-block w-90" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    <div class="product-txt">
+                        <h3>Conjunto de Lana Morado</h3>
+                        <p>(Guantes, Gorro, Cuello, Bolso), Calidad Premium</p>
+                        <p class="precio">$95.900</p>
+                        <a onclick="agregarAlCarrito()" href="#" class="agregar-carrito btn-2" data-id="1">Agregar al
+                            Carrito</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="imagenes prendas de lana/IMG_6372.jpg" class="c-block w-90" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagenes prendas de lana/IMG_6374.jpg" class="c-block w-90" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagenes prendas de lana/IMG_6382.jpg" class="c-block w-90" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    <div class="product-txt">
+                        <h3>Conjunto de Lana Blanco</h3>
+                        <p>(Guantes, Gorro, Cuello), Calidad Premium</p>
+                        <p class="precio">$75.900</p>
+                        <a onclick="agregarAlCarrito()" href="#" class="agregar-carrito btn-2" data-id="1">Agregar al
+                            Carrito</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="imagenes prendas de lana/IMG_6221.jpg" class="c-block w-90" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagenes prendas de lana/IMG_6232.jpg" class="c-block w-90" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    <div class="product-txt">
+                        <h3>Chaleco de Lana Blanco</h3>
+                        <p>(Chaleco), Calidad Premium</p>
+                        <p class="precio">$35.900</p>
+                        <a onclick="agregarAlCarrito()" href="#" class="agregar-carrito btn-2" data-id="1">Agregar al
+                            Carrito</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="imagenes prendas de lana/IMG_6416.jpg" class="c-block w-90" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagenes prendas de lana/IMG_6420.jpg" class="c-block w-90" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagenes prendas de lana/IMG_6422.jpg" class="c-block w-90" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    <div class="product-txt">
+                        <h3>Conjunto de Lana Negro</h3>
+                        <p>(Guantes, Gorro, Cuello), Calidad Premium</p>
+                        <p class="precio">$75.900</p>
+                        <a onclick="agregarAlCarrito()" href="#" class="agregar-carrito btn-2" data-id="1">Agregar al
+                            Carrito</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </main>
+
+
+    <section class="icons container">
+
+        <div class="icon-1">
+            <div class="icon-img">
+                <img src="imagenes estandar/i1.svg" alt="">
+            </div>
+            <div class="icon-txt">
+                <h3 onclick="infoUno()" class="btn-downOne">Hecho en Colombia</h3>
+                <p>Calidad 100% Colombiana </p>
+            </div>
+        </div>
+
+        <div class="icon-1">
+            <div class="icon-img">
+                <img src="imagenes estandar/i2.svg" alt="">
+            </div>
+            <div class="icon-txt">
+                <h3 onclick="infoDos()" class="btn-downOne">Cuidado y Precauciones</h3>
+                <p>Recomendaciones</p>
+            </div>
+        </div>
+
+        <div class="icon-1">
+            <div class="icon-img">
+                <img src="imagenes estandar/i3.svg" alt="">
+            </div>
+            <div class="icon-txt">
+                <h3 onclick="infoTres()" class="btn-downOne">Industria Manufacturera</h3>
+                <p>Artesanias de Colombia</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog container">
+        <div class="blog-1">
+            <img src="imagenes estandar/b1.jpg" alt="">
+            <h3 onclick="oops()">El renacimiento de la lana colombiana</h3>
+            <p>Explorando el auge y la innovación en la industria lanera nacional</p>
+        </div>
+
+        <div class="blog-1">
+            <img src="imagenes estandar/b2.jpg" alt="">
+            <h3 onclick="oops()">La magia de la lana andina</h3>
+            <p>Descubre técnicas ancestrales y diseños modernos de tejeduría colombiana</p>
+        </div>
+
+        <div class="blog-1">
+            <img src="imagenes estandar/b3.jpg" alt="">
+            <h3 onclick="oops()">Lana sostenible: El futuro de la moda ética</h3>
+            <p> Cómo la lana colombiana lidera prácticas eco-amigables en la moda</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3>Lanas de Sali</h3>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Facebook</h3>
+
+                <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+
+
+            </div>
+
+            <div class="link">
+                <h3>Youtube</h3>
+                <ul>
+                    <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Instagram</h3>
+                <ul>
+                    <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetAlert.js"></script>
+
+
+</body>
+
+</html>
